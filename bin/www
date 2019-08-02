@@ -7,12 +7,14 @@
 var app = require('../app');
 var debug = require('debug')('slogin:server');
 var http = require('http');
+const https = require('https');
+const fs = require('fs');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '3333');
 app.set('port', port);
 
 /**
@@ -20,6 +22,33 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+/**
+ * Code Starting For the Https Enable.
+ */
+  
+/**
+ * Create HTTPS server.
+ */
+ 
+// const server = https.createServer(options, app);
+
+
+ /**
+ *SSL Certificate
+ */
+// var options = {
+//   ca:fs.readFileSync('/etc/letsencrypt/live/localhost/chain.pem'),
+//   key:fs.readFileSync('/etc/letsencrypt/live/localhost/privkey.pem'),
+//   cert:fs.readFileSync('/etc/letsencrypt/live/localhost/cert.pem')
+//   }
+
+
+/**End Activation code for https */
 
 /**
  * Listen on provided port, on all network interfaces.
